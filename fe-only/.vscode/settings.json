@@ -1,0 +1,16 @@
+{
+  "cSpell.words": ["memtime"],
+  "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint", "source.fixAll.eslint"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.nodePath": "./node_modules/.bin/eslint",
+  "eslint.options": { "overrideConfigFile": "./eslint.config.js" },
+  "eslint.useFlatConfig": true,
+  "eslint.validate": ["javascript", "typescript", "typescriptreact"],
+  "explorer.confirmDelete": false,
+  "files.autoSave": "off",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "js/ts.tsdk.path": "./node_modules/typescript/lib",
+  "json.schemaDownload.enable": true
+}
