@@ -1,0 +1,9 @@
+ARG STAGE=latest
+
+FROM memtime-base:${STAGE}
+
+COPY scripts/cd.sh .
+
+USER memtime
+
+CMD ["echo", "ok"]

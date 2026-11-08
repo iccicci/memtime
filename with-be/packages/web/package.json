@@ -1,0 +1,13 @@
+{
+  "name": "memtime-web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "dependencies": {
+    "memtime-shared": "*"
+  },
+  "scripts": {
+    "build": "vite build",
+    "tsc": "tsc"
+  }
+}

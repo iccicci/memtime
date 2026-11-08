@@ -1,0 +1,42 @@
+networks:
+  memtime:
+    name: memtime-${STAGE}
+
+services:
+  memtime:
+    environment:
+      API_BASE_URL: "${API_BASE_URL}"
+      API_KEY: "${API_KEY}"
+      GITHUB_SECRET: "${GITHUB_SECRET}"
+      RATE_LIMIT: "${RATE_LIMIT}"
+      RATE_WINDOW: "${RATE_WINDOW}"
+      SESSION: "${SESSION}"
+    image: memtime:${STAGE}
+    networks:
+      - memtime
+    ports:
+      - "${PORT}:${PORT}"
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - logs:/home/memtime/packages/server/logs
+
+volumes:
+  logs:
+    driver: local
+    driver_opts:
+      device: ./logs
+      o: bind
+      type: none
+  ssh:
+    driver: local
+    driver_opts:
+      device: ${HOME}/.ssh
+      o: bind
+      type: none
+  memtime:
+    driver: local
+    driver_opts:
+      device: ..
+      o: bind
+      type: none

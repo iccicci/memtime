@@ -1,0 +1,17 @@
+.build
+.deps
+.env
+.lint
+.tsc
+.yarn
+logs/*
+node_modules
+packages/server/dist
+packages/server/logs
+packages/web/.vite
+packages/web/dist
+packages/web/src/env.ts
+tsconfig.tsbuildinfo
+yarn-error.log
+
+!**/.empty

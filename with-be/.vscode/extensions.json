@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "myh.preview-vscode",
+    "ms-azuretools.vscode-containers",
+    "rohit-gohri.format-code-action",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}

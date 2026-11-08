@@ -1,0 +1,63 @@
+{
+  "name": "memtime",
+  "description": "memtime test",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@types/cookie-session": "^2.0.49",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^25.8.0",
+    "@types/uuid": "^11.0.0",
+    "@types/ws": "^8.18.1",
+    "cookie-session": "^2.1.1",
+    "express": "^5.2.1",
+    "morgan": "^1.10.1",
+    "rotating-file-stream": "^3.2.9",
+    "tsx": "^4.22.0",
+    "typescript": "^6.0.3",
+    "uuid": "^14.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.184.1",
+    "@vitejs/plugin-react": "^6.0.2",
+    "eslint": "^10.4.0",
+    "eslint-plugin-perfectionist": "^5.9.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "eslint-plugin-simple-import-sort": "^13.0.0",
+    "globals": "^17.6.0",
+    "prettier": "^3.8.3",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-router-dom": "^7.15.1",
+    "typescript-eslint": "^8.59.3",
+    "vite": "^8.0.13",
+    "vitest": "^4.1.6"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "bracketSameLine": false,
+    "endOfLine": "lf",
+    "printWidth": 150,
+    "singleAttributePerLine": false,
+    "trailingComma": "none",
+    "useTabs": false
+  },
+  "scripts": {
+    "env": "tsx scripts/env",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "packages": "yarn-upgrade-all --ignore-workspace-root-check",
+    "start": "yarn dev",
+    "test": "vitest --watch"
+  },
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ]
+}

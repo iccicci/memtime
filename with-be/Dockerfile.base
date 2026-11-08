@@ -1,0 +1,27 @@
+ARG NODEJS_VERSION=latest
+
+FROM node:${NODEJS_VERSION}-alpine
+
+ARG DOCKER
+ARG GID
+ARG PORT
+ARG STAGE
+ARG UID
+
+ENV PORT=${PORT}
+ENV STAGE=${STAGE}
+
+RUN \
+    delgroup ping && \
+    deluser node && \
+    addgroup -g ${DOCKER} docker && \
+    addgroup -g ${GID} memtime && \
+    adduser -D -G memtime -s /bin/bash -u ${UID} memtime && \
+    addgroup memtime docker && \
+    apk update && \
+    apk add bash docker docker-compose git make openssh && \
+    npm i -g yarn
+
+WORKDIR /home/memtime
+
+ENTRYPOINT []
